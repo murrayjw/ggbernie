@@ -1,0 +1,14 @@
+Package: ggbernie
+Type: Package
+Title: Add Bernie to Plots
+Version: 0.1.0
+Authors@R: 
+    person(given = "Murray",
+           family = "Josh",
+           role = c("aut", "cre"),
+           email = "joshua.murray@utoronto.ca")
+Description: Add Bernie in mittens from the 2021 Biden inauguration to any ggplot with geom_bernie()
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.1

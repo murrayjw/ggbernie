@@ -1,0 +1,77 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+   collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figure/",
+  fig.height = 4
+)
+```
+
+# ggbernie
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+ggbernie let's you add the dripped out Bernie Sanders from the Biden inauguration
+to any ggplot. 
+
+The code is based off the [`ggtech` package](https://github.com/ricardo-bion/ggtech) and
+[`ggnba` package](https://github.com/ariespirgel/ggnba)
+
+## Installation
+
+You can install ggbernie from github with the following 
+
+
+``` r
+remotes::install_github("murrayjw/ggbernie")
+```
+
+## Using `ggbernie`
+
+
+```{r example1, warning=F, message=F}
+library(ggplot2)
+library(ggbernie)
+library(dplyr)
+library(gapminder)
+
+
+tibble(x = 1, y = 1) %>% 
+  ggplot(aes(x, y)) +
+  geom_bernie(size = 1) + 
+  theme_minimal()
+
+
+```
+
+
+
+```{r example2, warning=F, message=F}
+library(ggplot2)
+library(ggbernie)
+library(dplyr)
+library(gapminder)
+
+df <- gapminder::gapminder %>% 
+  filter(country == "United States")
+
+df %>% 
+  ggplot(aes(year, lifeExp)) +
+  geom_bernie() + 
+  labs(x = "Year",
+       y = "Life Expectancy",
+       title = "Life Expectancy in the United States") +
+  theme_minimal()
+
+```
+
+
+
+
